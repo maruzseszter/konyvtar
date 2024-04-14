@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "mariadb-java-client-2.7.10.jar",
+        "commons-csv-1.10.0.jar"
+    ]
+}

@@ -1,0 +1,22 @@
+
+CREATE DATABASE IF NOT EXISTS konyvtar
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE konyvtar;
+
+CREATE TABLE IF NOT EXISTS Kolcsonzok (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nev VARCHAR(255) DEFAULT NULL,
+    szulIdo VARCHAR(50) DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Kolcsonzesek (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kolcsonzokId INT,
+    iro VARCHAR(255) DEFAULT NULL,
+    mufaj VARCHAR(255) DEFAULT NULL,
+    cim VARCHAR(255) DEFAULT NULL,
+    FOREIGN KEY (kolcsonzokId) REFERENCES Kolcsonzok(id)
+);
+
